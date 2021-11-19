@@ -1,5 +1,5 @@
 # ftcp
-An tcp proxy server/client which exchange the data in temp files
+A tcp proxy server/client which exchange the data in temp files
 
 通过在临时文件中交换数据来进行TCP代理的一个服务端/客户端
 
@@ -12,3 +12,9 @@ An tcp proxy server/client which exchange the data in temp files
 占用资源极大且最开始的几个链接可能完全不能用，可能是系统线程调度策略导致的。
 
 之后会逐渐改写为基于tokio的异步代理库（当然高三了也没太多时间搞这个
+
+目前的逻辑是对每一个tcp连接开一个文件夹，文件夹内建立upload和download两个子文件夹
+
+然后客户端向upload写入并轮询download，服务端反之
+
+一个tcp连接中的每个包被作为一个文件转发
