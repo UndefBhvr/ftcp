@@ -1,10 +1,11 @@
 [package]
 name = "ftcp"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-log = "0.4.14"
-rayon = "1.5.1"
+#log = "0.4.14"
+tokio = {version = "^1.14.0", features = ["full"]}
+#reqwest = "0.9.24"
