@@ -7,7 +7,7 @@ A tcp proxy server/client which exchange the data in temp files
 
 但学校内建有公共ftp服务器，因此就有了这个借助文件进行代理的项目
 
-基于tokio，由于crates.io上的async_ftp不支持gbk所以魔改了一份（尚未放上文件），目前还是本地文件转发的试验版本
+基于tokio，由于crates.io上的async_ftp不支持gbk所以[魔改了一份](https://github.com/ILSYT/async_ftp_gbk)，目前还是本地文件转发的试验版本
 
 由于我校ftp服务器有至少0.2s的延迟所以会尽力通过高并发来提速（当然高三了也没太多时间搞这个
 
